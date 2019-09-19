@@ -14,38 +14,388 @@
 
     "rooms": {
       "START": {
-        "name": "Starting place",
-        "desc": "This is the place to start!",
+        "name": "Dungeon Cell",
+        "desc": "You awake with no memory in a dark, damp cell in the dungeon of the King's castle. You are surrounded by stone walls. On the north wall is a large oak door, and in the southern wall is a round window.",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "LOC2",
+            "target": "HALL",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "LOC2",
+            "target": "FIELD",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "LOC2",
+            "target": "START",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "LOC2",
+            "target": "START",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
+      "HALL": {
+        "name": "Dungeon Hallway",
+        "desc": "You open the door and step out into a dimly torch lit hallway running east to west. In front of you is another cell door standing ajar.",
         "exits": [
+          {
+            "verb": "NORTH",
+            "target": "CELL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "GUARD",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WALL",
+            "condition": ""
+          }
         ],
         "inventory": []
+      },
+      "CELL": {
+        "name": "Empty Cell",
+        "desc": "You walk into the empty cell across from yours and find yourself in an even smaller cell with no window. The door swings shut behind you and you hear the click of a lock. A voice laughs and says, 'Foolish mortal this is a magical lock you are trapped here for eternity!'",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "L1",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "L1",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "L1",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "L1",
+            "condition":""
+          }
+        ],
+        "inventory": []
+      },
+      "L1": {
+        "name":"Empty Cell",
+        "desc": "What part of magical lock do you not understand. Quit the game you cretin",
+        "exits":[],
+        "inventory":[]
+      },
+      "FIELD": {
+        "name": "Field",
+        "desc": "You squeeze through the window and find yourself in a field outside the castle walls. You see a dense forest farther south and stretches of field to the east and west.",
+        "exits":[
+          {
+            "verb": "NORTH",
+            "target": "START",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "FOREST",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"FIELDE",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"FIELDW",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "FIELDE": {
+        "name": "Eastern Field",
+        "desc": "You walk east, past the castle, and find yourself in field of dead wheat. You see a familiar looking barn to the north and a pond in the east.",
+        "exits":[
+          {
+            "verb": "NORTH",
+            "target": "BARN",
+            "condition":""
+          },
+          {
+            "verb": "EAST",
+            "target": "POND",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "FIELDW": {
+        "name": "Western Field",
+        "desc": "You walk west and arrive in front of the castle gate. You can see 'WANTED' posters with your face on them that accuse you of poisoning the wheat. You can see guards standing at the open gate",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "GATE",
+            "condition":""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "FOREST",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target": "DEATH",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"FIELD",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "FOREST": {
+        "name": "Forest",
+        "desc": "You wander into a dense forest until a bear suddenly comes from behind the trees and mauls you to death!",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "L2",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target":"L2",
+            "condition":""
+          },
+          {
+            "verb": "EAST",
+            "target":"L2",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L2",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "L2": {
+        "name": "Forest",
+        "desc": "Your rotting corpse lays on the ground you cannot do anything. You lose. Quit loser.",
+        "exits":[],
+        "inventory":[]
+      },
+      "BARN": {
+        "name": "Barn",
+        "desc": "You walk into the barn and your memory floods back as you realize you are the local farmer who got thrown in the dungeon because your wheat went bad. You decide to lay low and stay in the barn",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"W1",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"W1",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"W1",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"W1",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "POND": {
+        "name": "Pond",
+        "desc": "You walk over to the pond and lean down to pick up a rock to skip it. As you lean down you slip and fall into the pond. You splash about and struggle because you are a peasant and don't know how to swim.",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"L3",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"L3",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"L3",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L3",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "L3": {
+        "name":"Pond",
+        "desc": "Your drowned body floats in the pond face down. You have lost due to lack of animal instinct to doggy paddle. Quit the game.",
+        "exits":[],
+        "inventory":[]
+      },
+      "W1": {
+        "name":"Barn",
+        "desc": "Don't leave the barn imbecile, you won the game and figured out your past, just quit the game already.",
+        "exits":[],
+        "inventory":[]
+      },
+      "GATE": {
+        "name": "Castle Gate",
+        "desc": "You walk up to the castle gate. The guards recognize you from the posters. They grab you and throw you back in a cell and lock the door.",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"L4",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"L4",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"L4",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L4",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "L4": {
+        "name":"Dungeon Cell",
+        "desc": "You are stuck in another cell and rot in darkness. Quit the game and try not to walk right up to the people who arrested you in the first place",
+        "exits":[],
+        "inventory":[]
+      },
+      "DEATH": {
+        "name": "Death Pit",
+        "desc": "You come across a large pit filled with the bodies of people who have died of the plague.",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"L5",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"L5",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"L5",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L5",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "L5": {
+        "name":"Death Pit",
+        "desc": "You feel the  plague begin to take over your soul as you fall face first down into the pit. Quit the game and try not to catch the plague.",
+        "exits":[],
+        "inventory":[]
+      },
+      "GUARD": {
+        "name": "Guard's Room",
+        "desc": "You walk out a door at the end of the hallway and come out into a room filled with the King's guard.",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"L6",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"L6",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"L6",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L6",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "WALL": {
+        "name": "Deadend",
+        "desc": "You walk into a deadend. You hear a door at the opposite end of the hallway open and someone yell 'HEY!'",
+        "exits":[
+          {
+            "verb":"NORTH",
+            "target":"L7",
+            "condition":""
+          },
+          {
+            "verb":"SOUTH",
+            "target":"L7",
+            "condition":""
+          },
+          {
+            "verb":"EAST",
+            "target":"L7",
+            "condition":""
+          },
+          {
+            "verb":"WEST",
+            "target":"L7",
+            "condition":""
+          }
+        ],
+        "inventory":[]
+      },
+      "L6": {
+        "name" :"Dungeon Cell",
+        "desc": "The guards grabbed you and threw back into a cell to rot. Quit the game and realize that the guards aren't stupid, of course they'd be guarding the exit!",
+        "exits":[],
+        "inventory":[]
+      },
+      "L7": {
+        "name":"Dungeon Cell",
+        "desc": "A guard comes lumbering down the hallway and tackles you. Your head hits the stone wall and you black out. You wake up back in a cell with the door locked this time. Quit the game and try again with a mental image this time.",
+        "exits":[],
+        "inventory":[]
       }
     }
   }
