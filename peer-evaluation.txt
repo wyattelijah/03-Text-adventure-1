@@ -1,0 +1,38 @@
+Name: Luca Dixie
+Date: 9-28-19
+Project: 03-Text-Adventure
+Peer's repository: https://github.com/wyattelijah/03-Text-adventure-1
+
+
+
+What is something you learned by reviewing your peer's project?
+
+    This project taught me a better way to let players know when to quit the game.
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+
+    More effort into putting in more locations, situations, etc.
+
+What suggestions would you have for your peer to improve his/her code?
+
+    Only suggestion is to rename the main file for the game, got a little confused on how to find it at first. 
+
+What could have been clearer or better commented?
+
+    Where the actual edited game file was (possibly delete the other uneeded files). 
+
+Was there anything in the code that was confusing to you? If so, what?
+
+    N/A
+
+Does the repository contain an appropriate LICENSE?
+
+    Yes.
+
+What is something he/she could add to the README.md to make it more descriptive?
+
+    Seems descriptive enough, details what the main files do.
+
+Pay a compliment to your peer based on the quality of his/her code.
+
+    The game is creative and funny, no errors from what I saw.
